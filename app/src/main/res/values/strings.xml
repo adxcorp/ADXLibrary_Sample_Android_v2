@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ADXLibrary_Sample_Android_v2</string>
+    <string name="adx_app_id">61ee18cecb8c670001000023</string>
+    <string name="banner_unit_id">61ee2b7dcb8c67000100002a</string>
+    <string name="mrec_unit_id">61ee3fb5cb8c67000100005a</string>
+    <string name="interstitial_unit_id">61ee2e3fcb8c67000100002e</string>
+    <string name="rewarded_ad_unit_id">61ee2e91cb8c67000100002f</string>
+    <string name="native_unit_id">61ee2ea2cb8c670001000030</string>
+    <string name="native_close_unit_id">61ee40c6cb8c670001000062</string>
+</resources>
