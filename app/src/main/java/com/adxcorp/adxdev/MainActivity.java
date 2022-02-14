@@ -1,5 +1,6 @@
 package com.adxcorp.adxdev;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
         // ADX Native AD 초기화
         initAdxNative();
 
-        ADXSdk.getInstance().initialize(this, adxConfiguration, new ADXSdk.OnInitializedListener() {
+        ADXSdk.getInstance().initialize((Activity) this, adxConfiguration, new ADXSdk.OnInitializedListener() {
             @Override
-            public void onCompleted(boolean b, ADXGDPR.ADXConsentState adxConsentState) {
+            public void onCompleted(boolean result, ADXGDPR.ADXConsentState adxConsentState) {
                 // 광고 초기화 완료
             }
         });
