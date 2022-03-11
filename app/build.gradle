@@ -42,6 +42,7 @@ dependencies {
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
 
+    // 네이티브 연동할 경우 이미지 모듈로 Glide 적용 추천
     implementation 'com.github.bumptech.glide:glide:4.10.0'
 
     // 네이티브만 포함할 경우
@@ -53,6 +54,9 @@ dependencies {
     // 리워드 비디오만 포함할 경우
     implementation "com.github.adxcorp.ADXLibrary_Android:adx-library-rewarded-video:$adxSdkVersion"
 
-    // 탭조이를 추가 연동할 경우
+//    // 카울리를 추가 연동할 경우 (Optional)
+//    implementation "com.github.adxcorp.ADXLibrary_Android:adx-library-cauly:$adxSdkVersion"
+
+    // 탭조이를 추가 연동할 경우 (Optional)
     implementation "com.github.adxcorp.ADXLibrary_Android:adx-library-tapjoy:$adxSdkVersion"
 }
