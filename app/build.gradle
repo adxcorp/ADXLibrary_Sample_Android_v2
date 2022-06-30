@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
 
     defaultConfig {
         applicationId "com.adxcorp.adxdev"
         minSdkVersion 19
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -54,9 +54,11 @@ dependencies {
     // 리워드 비디오만 포함할 경우
     implementation "com.github.adxcorp.ADXLibrary_Android:adx-library-rewarded-video:$adxSdkVersion"
 
-//    // 카울리를 추가 연동할 경우 (Optional)
-//    implementation "com.github.adxcorp.ADXLibrary_Android:adx-library-cauly:$adxSdkVersion"
+    /*
+    // 카울리를 추가 연동할 경우 (Optional)
+    implementation "com.github.adxcorp.ADXLibrary_Android:adx-library-cauly:$adxSdkVersion"
 
     // 탭조이를 추가 연동할 경우 (Optional)
     implementation "com.github.adxcorp.ADXLibrary_Android:adx-library-tapjoy:$adxSdkVersion"
+     */
 }
