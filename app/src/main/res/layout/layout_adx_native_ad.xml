@@ -37,7 +37,7 @@
                 android:layout_marginRight="5dp"
                 android:gravity="center"
                 android:maxLines="1"
-                android:text="Sponsored"
+                android:text="Ad"
                 android:textColor="#FFFFFF"
                 android:textSize="10dp" />
 
