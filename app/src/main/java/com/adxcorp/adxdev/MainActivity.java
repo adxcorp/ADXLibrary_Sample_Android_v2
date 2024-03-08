@@ -105,6 +105,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @OnClick(R.id.btn_news_banner)
+    void onNewsBanner() {
+        Intent intent = new Intent(this, NewsBannerActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onDestroy() {
         super.onDestroy();

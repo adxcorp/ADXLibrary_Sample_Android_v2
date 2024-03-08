@@ -24,6 +24,7 @@
         </activity>
 
         <activity android:name=".BannerActivity" />
+        <activity android:name=".NewsBannerActivity" />
         <activity android:name=".InterstitialActivity" />
         <activity android:name=".RewardedAdActivity" />
         <activity android:name=".CloseAdActivity" />

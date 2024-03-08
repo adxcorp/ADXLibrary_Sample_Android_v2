@@ -2,6 +2,7 @@
     <string name="app_name">ADXLibrary_Sample_Android_v2</string>
     <string name="adx_app_id">61ee18cecb8c670001000023</string>
     <string name="banner_unit_id">61ee2b7dcb8c67000100002a</string>
+    <string name="news_banner_unit_id">652f91ff4c562c0001000013</string>
     <string name="mrec_unit_id">61ee3fb5cb8c67000100005a</string>
     <string name="interstitial_unit_id">61ee2e3fcb8c67000100002e</string>
     <string name="rewarded_ad_unit_id">61ee2e91cb8c67000100002f</string>
