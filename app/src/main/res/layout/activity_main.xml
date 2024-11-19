@@ -16,18 +16,12 @@
             android:id="@+id/btn_interstitial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:text="Interstitial Example" />
 
         <Button
             android:id="@+id/btn_banner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_marginTop="10dp"
             android:text="Banner Example" />
 
@@ -35,18 +29,12 @@
             android:id="@+id/btn_close_ad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_marginTop="10dp"
             android:text="Close Ad Example" />
         <Button
             android:id="@+id/btn_native_close_ad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_marginTop="10dp"
             android:text="Native Close Ad Example" />
 
@@ -54,9 +42,6 @@
             android:id="@+id/btn_native_ad_recycler_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_marginTop="10dp"
             android:text="Native Ad RecyclerView Example" />
 
@@ -64,9 +49,6 @@
             android:id="@+id/btn_native_ad_factory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_marginTop="10dp"
             android:text="Native Ad Factory Example" />
 
@@ -74,9 +56,6 @@
             android:id="@+id/btn_rewarded_ad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_marginTop="10dp"
             android:text="Rewarded Ad Example" />
 
@@ -84,10 +63,14 @@
             android:id="@+id/btn_news_banner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_marginTop="10dp"
             android:text="News Banner Ad Example" />
+
+        <Button
+            android:id="@+id/btn_news_native"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="News Native Ad Example" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

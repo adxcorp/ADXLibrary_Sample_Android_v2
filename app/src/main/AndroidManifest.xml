@@ -31,6 +31,7 @@
         <activity android:name=".CloseNativeAdActivity" />
         <activity android:name=".NativeAdFactoryActivity" />
         <activity android:name=".NativeAdRecyclerViewActivity" />
+        <activity android:name=".NewsNativeActivity" />
 
         <!-- AdMob (Sample) -->
         <meta-data

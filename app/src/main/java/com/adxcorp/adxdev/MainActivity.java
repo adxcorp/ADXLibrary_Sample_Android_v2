@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,13 +14,6 @@ import com.adxcorp.ads.nativeads.AdxNativeAdFactory;
 import com.adxcorp.ads.nativeads.AdxViewBinder;
 import com.adxcorp.gdpr.ADXGDPR;
 import com.adxcorp.util.ADXLogUtil;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.RequestConfiguration;
-
-import java.util.Arrays;
-
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+
+        initAction();
 
         // ADX 로그 활성화
         ADXLogUtil.setLogEnable(true);
@@ -51,9 +46,75 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void initAction() {
+        findViewById(R.id.btn_interstitial).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onInterstitial();
+            }
+        });
+
+        findViewById(R.id.btn_banner).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBanner();
+            }
+        });
+
+        findViewById(R.id.btn_close_ad).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCloseAd();
+            }
+        });
+
+        findViewById(R.id.btn_native_close_ad).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onNativeCloseAd();
+            }
+        });
+
+        findViewById(R.id.btn_native_ad_factory).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onNativeAdFactory();
+            }
+        });
+
+        findViewById(R.id.btn_native_ad_recycler_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onNativeRecyclerView();
+            }
+        });
+
+        findViewById(R.id.btn_rewarded_ad).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onRewardedAd();
+            }
+        });
+
+        findViewById(R.id.btn_news_banner).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onNewsBanner();
+            }
+        });
+
+        findViewById(R.id.btn_news_native).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onNewsNative();
+            }
+        });
+    }
+
     private void initAdxNative() {
         AdxNativeAdFactory.init(this);
 
+        // 네이티브 광고를 위한 ViewBinder 설정
         AdxNativeAdFactory.setAdxViewBinder(getString(R.string.native_unit_id), new AdxViewBinder.Builder(R.layout.layout_adx_native_ad)
                 .mediaViewContainerId(R.id.mediaContainerId)
                 .iconImageId(R.id.adIconId)
@@ -61,53 +122,60 @@ public class MainActivity extends AppCompatActivity {
                 .adChoiceContainerId(R.id.adChoicesContainerId)
                 .callToActionId(R.id.callToActionId)
                 .build());
+
+        // 뉴스 네이티브를 위한 ViewBinder 설정
+        AdxNativeAdFactory.setAdxViewBinder(getString(R.string.news_native_unit_id), new AdxViewBinder.Builder(R.layout.layout_news_native_ad)
+                .iconImageId(R.id.adIconId)
+                .titleId(R.id.titleId)
+                .textId(R.id.descriptionId)
+                .adChoiceContainerId(R.id.adChoicesContainerId)
+                .addExtra("news_title", R.id.news_title)
+                .addExtra("news_icon", R.id.news_icon)
+                .build());
     }
 
-    @OnClick(R.id.btn_interstitial)
     void onInterstitial() {
         Intent intent = new Intent(this, InterstitialActivity.class);
         startActivity(intent);
     }
 
-    @OnClick(R.id.btn_banner)
     void onBanner() {
         Intent intent = new Intent(this, BannerActivity.class);
         startActivity(intent);
     }
 
-    @OnClick(R.id.btn_close_ad)
     void onCloseAd() {
         Intent intent = new Intent(this, CloseAdActivity.class);
         startActivity(intent);
     }
 
-    @OnClick(R.id.btn_native_close_ad)
     void onNativeCloseAd() {
         Intent intent = new Intent(this, CloseNativeAdActivity.class);
         startActivity(intent);
     }
 
-    @OnClick(R.id.btn_native_ad_factory)
     void onNativeAdFactory() {
         Intent intent = new Intent(this, NativeAdFactoryActivity.class);
         startActivity(intent);
     }
 
-    @OnClick(R.id.btn_native_ad_recycler_view)
     void onNativeRecyclerView() {
         Intent intent = new Intent(this, NativeAdRecyclerViewActivity.class);
         startActivity(intent);
     }
 
-    @OnClick(R.id.btn_rewarded_ad)
     void onRewardedAd() {
         Intent intent = new Intent(this, RewardedAdActivity.class);
         startActivity(intent);
     }
 
-    @OnClick(R.id.btn_news_banner)
     void onNewsBanner() {
         Intent intent = new Intent(this, NewsBannerActivity.class);
+        startActivity(intent);
+    }
+
+    void onNewsNative() {
+        Intent intent = new Intent(this, NewsNativeActivity.class);
         startActivity(intent);
     }
 

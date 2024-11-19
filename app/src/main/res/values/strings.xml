@@ -8,4 +8,5 @@
     <string name="rewarded_ad_unit_id">61ee2e91cb8c67000100002f</string>
     <string name="native_unit_id">61ee2ea2cb8c670001000030</string>
     <string name="native_close_unit_id">61ee40c6cb8c670001000062</string>
+    <string name="news_native_unit_id">6630a6a6da583e0001000007</string>
 </resources>

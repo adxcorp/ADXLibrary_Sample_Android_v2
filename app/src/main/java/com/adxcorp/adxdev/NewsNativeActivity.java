@@ -8,10 +8,10 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.adxcorp.ads.nativeads.AdxNativeAdFactory;
+import com.adxcorp.ads.nativeads.NativeAd;
 
-public class NativeAdFactoryActivity extends AppCompatActivity {
-
-    private static final String TAG = "ADX:" + NativeAdFactoryActivity.class.getSimpleName();
+public class NewsNativeActivity extends AppCompatActivity {
+    private static final String TAG = "ADX:" + NewsNativeActivity.class.getSimpleName();
 
     LinearLayout mContentView;
 
@@ -26,7 +26,7 @@ public class NativeAdFactoryActivity extends AppCompatActivity {
             if (mAdxUnitId.equals(s)) {
                 mNativeAd = nativeAd;
                 mAdView = AdxNativeAdFactory.getNativeAdView(
-                        NativeAdFactoryActivity.this,
+                        NewsNativeActivity.this,
                         mAdxUnitId,
                         mContentView,
                         new com.adxcorp.ads.nativeads.NativeAd.NativeEventListener() {
@@ -40,6 +40,12 @@ public class NativeAdFactoryActivity extends AppCompatActivity {
                                 Log.d(TAG, "onClick");
                             }
                         });
+//                mNativeAd.setNewsClickEventListener(new NativeAd.NewsClickListener() {
+//                    @Override
+//                    public void onNewsClicked() {
+//                        Log.d(TAG, "onNewsClicked");
+//                    }
+//                });
                 mContentView.addView(mAdView);
             }
         }
@@ -55,7 +61,7 @@ public class NativeAdFactoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_native_ad_factory);
 
-        mAdxUnitId = getString(R.string.native_unit_id);
+        mAdxUnitId = getString(R.string.news_native_unit_id);
 
         mContentView = findViewById(R.id.content_main);
 

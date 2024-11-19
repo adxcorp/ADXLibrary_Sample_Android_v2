@@ -3,12 +3,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion 33
+    compileSdk 34
+
+    namespace "com.adxcorp.adxdev"
 
     defaultConfig {
         applicationId "com.adxcorp.adxdev"
-        minSdkVersion 19
-        targetSdkVersion 33
+        minSdkVersion 21
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -40,11 +42,8 @@ dependencies {
 
     implementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation 'com.jakewharton:butterknife:10.1.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
-
     // 네이티브 연동할 경우 이미지 모듈로 Glide 적용 추천
-    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    implementation 'com.github.bumptech.glide:glide:4.15.0'
 
     // 네이티브만 포함할 경우
     implementation "com.github.adxcorp.ADXLibrary_Android:adx-library-native:$adxSdkVersion"
@@ -58,8 +57,5 @@ dependencies {
     /*
     // 카울리를 추가 연동할 경우 (Optional)
     implementation "com.github.adxcorp.ADXLibrary_Android:adx-library-cauly:$adxSdkVersion"
-
-    // 탭조이를 추가 연동할 경우 (Optional)
-    implementation "com.github.adxcorp.ADXLibrary_Android:adx-library-tapjoy:$adxSdkVersion"
      */
 }
