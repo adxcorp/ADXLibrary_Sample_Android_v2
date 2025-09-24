@@ -15,9 +15,13 @@ import com.adxcorp.ads.nativeads.AdxViewBinder;
 import com.adxcorp.gdpr.ADXGDPR;
 import com.adxcorp.util.ADXLogUtil;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private static final String TAG = "ADX:" + MainActivity.class.getSimpleName();
+
+    public MainActivity() {
+        super(R.layout.activity_main, R.id.cl_main);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

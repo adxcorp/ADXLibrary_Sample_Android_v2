@@ -7,6 +7,7 @@
     android:background="#eeeeee"
     tools:showIn="@layout/activity_main">
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="30dp"
         android:id="@+id/native_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

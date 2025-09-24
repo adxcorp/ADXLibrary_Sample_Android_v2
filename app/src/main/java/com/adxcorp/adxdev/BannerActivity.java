@@ -9,15 +9,19 @@ import android.widget.Toast;
 import com.adxcorp.ads.BannerAd;
 import com.adxcorp.ads.common.AdConstants;
 
-public class BannerActivity extends AppCompatActivity {
+public class BannerActivity extends BaseActivity {
 
     private static final String TAG = "ADX:" + BannerActivity.class.getSimpleName();
 
     private BannerAd bannerAd;
+
+    public BannerActivity() {
+        super(R.layout.activity_banner, R.id.cl_banner);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_banner);
 
         bannerAd = findViewById(R.id.banner);
         bannerAd.setBannerListener(new BannerAd.BannerListener() {

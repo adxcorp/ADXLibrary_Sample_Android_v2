@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.adxcorp.ads.nativeads.AdxNativeAdFactory;
 
-public class NativeAdFactoryActivity extends AppCompatActivity {
+public class NativeAdFactoryActivity extends BaseActivity {
 
     private static final String TAG = "ADX:" + NativeAdFactoryActivity.class.getSimpleName();
 
@@ -18,6 +18,10 @@ public class NativeAdFactoryActivity extends AppCompatActivity {
     private View mAdView;
     private com.adxcorp.ads.nativeads.NativeAd mNativeAd;
     private String mAdxUnitId;
+
+    public NativeAdFactoryActivity() {
+        super(R.layout.activity_native_ad_factory, R.id.content_main);
+    }
 
     private final AdxNativeAdFactory.NativeAdListener mListener = new AdxNativeAdFactory.NativeAdListener() {
         @Override
@@ -53,7 +57,6 @@ public class NativeAdFactoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_native_ad_factory);
 
         mAdxUnitId = getString(R.string.native_unit_id);
 

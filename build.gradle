@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     // AD(X) SDK Version
-    ext.adxSdkVersion = '2.6.4'
+    ext.adxSdkVersion = '2.8.0'
 
     repositories {
         google()

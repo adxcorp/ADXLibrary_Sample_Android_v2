@@ -12,15 +12,19 @@ import com.adxcorp.ads.NewsBannerAd;
 import com.adxcorp.ads.NewsViewBinder;
 import com.adxcorp.ads.common.AdConstants;
 
-public class NewsBannerActivity extends AppCompatActivity {
+public class NewsBannerActivity extends BaseActivity {
 
     private static final String TAG = "ADX:" + NewsBannerActivity.class.getSimpleName();
 
     private NewsBannerAd bannerAd;
+
+    public NewsBannerActivity() {
+        super(R.layout.activity_news_banner, R.id.cl_news_banner);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_news_banner);
 
         NewsViewBinder viewBinder = new NewsViewBinder.Builder(R.layout.layout_news_banner)
                 .setBannerId(R.id.banner)

@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class NativeAdRecyclerViewActivity extends AppCompatActivity {
+public class NativeAdRecyclerViewActivity extends BaseActivity {
 
     private static final String TAG = "ADX:" + NativeAdRecyclerViewActivity.class.getSimpleName();
 
@@ -32,10 +32,13 @@ public class NativeAdRecyclerViewActivity extends AppCompatActivity {
 
     private String mAdxUnitId;
 
+    public NativeAdRecyclerViewActivity() {
+        super(R.layout.activity_native_ad_recyclerview, R.id.content_main);
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_native_ad_recyclerview);
 
         mAdxUnitId = getString(R.string.native_unit_id);
 

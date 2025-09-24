@@ -10,16 +10,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.adxcorp.ads.RewardedAd;
 
-public class RewardedAdActivity extends AppCompatActivity {
+public class RewardedAdActivity extends BaseActivity {
 
     private static final String TAG = "ADX:" + RewardedAdActivity.class.getSimpleName();
 
     private RewardedAd rewardedAd;
 
+    public RewardedAdActivity() {
+        super(R.layout.activity_fullscreen, R.id.cl_content);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fullscreen);
 
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {

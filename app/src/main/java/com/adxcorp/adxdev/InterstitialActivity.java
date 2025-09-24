@@ -10,16 +10,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.adxcorp.ads.InterstitialAd;
 
-public class InterstitialActivity extends AppCompatActivity {
+public class InterstitialActivity extends BaseActivity {
 
     private static final String TAG = "ADX:" + InterstitialActivity.class.getSimpleName();
 
     private InterstitialAd interstitialAd;
 
+    public InterstitialActivity() {
+        super(R.layout.activity_fullscreen, R.id.cl_content);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fullscreen);
 
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {

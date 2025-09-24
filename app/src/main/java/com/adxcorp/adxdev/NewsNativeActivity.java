@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.adxcorp.ads.nativeads.AdxNativeAdFactory;
 import com.adxcorp.ads.nativeads.NativeAd;
 
-public class NewsNativeActivity extends AppCompatActivity {
+public class NewsNativeActivity extends BaseActivity {
     private static final String TAG = "ADX:" + NewsNativeActivity.class.getSimpleName();
 
     LinearLayout mContentView;
@@ -56,10 +56,13 @@ public class NewsNativeActivity extends AppCompatActivity {
         }
     };
 
+    public NewsNativeActivity() {
+        super(R.layout.activity_native_ad_factory, R.id.bg_main);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_native_ad_factory);
 
         mAdxUnitId = getString(R.string.news_native_unit_id);
 
