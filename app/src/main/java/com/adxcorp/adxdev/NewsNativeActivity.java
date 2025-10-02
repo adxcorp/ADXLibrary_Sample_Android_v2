@@ -5,10 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.adxcorp.ads.nativeads.AdxNativeAdFactory;
-import com.adxcorp.ads.nativeads.NativeAd;
 
 public class NewsNativeActivity extends BaseActivity {
     private static final String TAG = "ADX:" + NewsNativeActivity.class.getSimpleName();

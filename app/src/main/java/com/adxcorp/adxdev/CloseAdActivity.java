@@ -4,17 +4,21 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.activity.OnBackPressedCallback;
 
 import com.adxcorp.ads.BannerAd;
 import com.adxcorp.ads.common.AdConstants;
 
-public class CloseAdActivity extends AppCompatActivity {
+public class CloseAdActivity extends BaseActivity {
 
     private static final String TAG = "ADX:" + CloseAdActivity.class.getSimpleName();
 
     private BannerAd mBannerAd;
     private CloseAdDialog mCloseDialog;
+
+    public CloseAdActivity() {
+        super(R.layout.activity_empty, R.id.cl_main);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,15 +58,17 @@ public class CloseAdActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
 
-    @Override
-    public void onBackPressed() {
-        if (mCloseDialog == null) {
-            super.onBackPressed();
-        } else {
-            mCloseDialog.show();
-        }
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                if (mCloseDialog == null) {
+                    finish();
+                } else {
+                    mCloseDialog.show();
+                }
+            }
+        });
     }
 
     @Override

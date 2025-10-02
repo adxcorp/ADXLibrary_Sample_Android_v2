@@ -3,6 +3,7 @@ package com.adxcorp.adxdev;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(layoutResId);
         View rootView = findViewById(rootId);
         applyEdgeToEdge(rootView);

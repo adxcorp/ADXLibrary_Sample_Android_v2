@@ -1,12 +1,9 @@
 package com.adxcorp.adxdev;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.adxcorp.ads.NewsBannerAd;
 import com.adxcorp.ads.NewsViewBinder;
