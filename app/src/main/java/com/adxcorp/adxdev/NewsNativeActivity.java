@@ -54,7 +54,7 @@ public class NewsNativeActivity extends BaseActivity {
     };
 
     public NewsNativeActivity() {
-        super(R.layout.activity_native_ad_factory, R.id.bg_main);
+        super(R.layout.activity_news_native, R.id.bg_main);
     }
 
     @Override

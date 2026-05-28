@@ -129,10 +129,12 @@ public class MainActivity extends BaseActivity {
 
         // 뉴스 네이티브를 위한 ViewBinder 설정
         AdxNativeAdFactory.setAdxViewBinder(getString(R.string.news_native_unit_id), new AdxViewBinder.Builder(R.layout.layout_news_native_ad)
+                .mediaViewContainerId(R.id.mediaContainerId)
                 .iconImageId(R.id.adIconId)
                 .titleId(R.id.titleId)
                 .textId(R.id.descriptionId)
                 .adChoiceContainerId(R.id.adChoicesContainerId)
+                .callToActionId(R.id.callToActionId)
                 .addExtra("news_title", R.id.news_title)
                 .addExtra("news_icon", R.id.news_icon)
                 .build());
