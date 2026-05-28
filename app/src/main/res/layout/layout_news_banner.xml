@@ -1,68 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="360dp"
-        android:layout_height="112dp"
-        android:layout_margin="5dp"
-        app:cardCornerRadius="6dp">
+    <LinearLayout
+        android:id="@+id/banner"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/news_contents">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/news_contents"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:background="#FF3F4356"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/news_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:background="#FFDADCE3"
+            android:gravity="center"
+            android:minWidth="36dp"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:text="NEWS"
+            android:textColor="#FF555B6E"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+        <com.adxcorp.adxdev.MarqueeTextView
+            android:id="@+id/news_title"
+            android:text=""
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="5dp"
-            android:layout_gravity="center"
-            android:gravity="center_horizontal">
-
-            <LinearLayout
-                android:id="@+id/banner"
-                android:layout_width="match_parent"
-                android:layout_height="59dp"
-                android:orientation="horizontal"
-                android:gravity="center">
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/news_feed"
-                android:layout_width="match_parent"
-                android:layout_height="28dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/news_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="6dp"
-                    android:layout_marginStart="12dp">
-
-                    <TextView
-                        android:layout_width="30dp"
-                        android:layout_height="22dp"
-                        android:gravity="center"
-                        android:background="#D9D9D9"
-                        android:textColor="#838383"
-                        android:textSize="12dp"
-                        android:text="뉴스" />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/news_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:textSize="16dp"
-                    android:textColor="#000000"
-                    android:lines="1"
-                    android:ellipsize="end"/>
-            </LinearLayout>
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-</RelativeLayout>
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textSize="12dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

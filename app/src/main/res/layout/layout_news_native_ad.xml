@@ -133,7 +133,7 @@
             android:textSize="10dp"
             android:textStyle="bold" />
 
-        <TextView
+        <com.adxcorp.adxdev.MarqueeTextView
             android:id="@+id/news_title"
             android:text=""
             android:layout_width="0dp"
